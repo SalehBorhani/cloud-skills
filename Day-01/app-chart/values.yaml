@@ -5,8 +5,9 @@
 replicaCount: 1
 
 image:
-  repository: docker.iranrepo.ir/salehborhani/app:v5
+  repository: docker.iranrepo.ir/salehborhani/app
   pullPolicy: IfNotPresent
+  tag: v1
 
 imagePullSecrets: []
 nameOverride: ""
@@ -69,7 +70,7 @@ resources: {}
   #   memory: 128Mi
 
 autoscaling:
-  enabled: true
+  enabled: false
   minReplicas: 1
   maxReplicas: 10
   targetCPUUtilizationPercentage: 80
